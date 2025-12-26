@@ -14,6 +14,10 @@ app.use(express.json());
 const analyticsRoutes = require("./routes/analytics.routes");
 app.use("/api/analytics", analyticsRoutes);
 
+const aiRoutes = require("./routes/ai.routes");
+app.use("/api/ai", aiRoutes);
+
+
 // ✅ MongoDB connection
 mongoose
   .connect(process.env.MONGO_URI)
